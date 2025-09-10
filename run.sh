@@ -129,7 +129,7 @@ if [[ "${SKIPUPDATE,,}" != "true" ]]; then
     fi
     # -manifest <MANIFEST_ID>
     # steamcmd +force_install_dir /config/gamefiles +login anonymous +app_update 1690800 -beta public -validate -manifest 30903977 +quit
-    steamcmd +force_install_dir /config/gamefiles +login anonymous +app_update "$STEAMAPPID" -beta "$STEAMBETAFLAG" validate -manifest 30903977 +quit
+    steamcmd +force_install_dir /config/gamefiles +login anonymous +app_update "$STEAMAPPID" -beta oldversion -manifest 19824343 validate +quit
     cp -r /home/steam/.steam/steam/logs/* "/config/logs/steam" || printf "Failed to store Steam logs\\n"
 else
     printf "Skipping update as flag is set\\n"
