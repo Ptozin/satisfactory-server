@@ -1,6 +1,8 @@
 services:
   satisfactory-server:
-    image: ./Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: 'satisfactory-server'
     hostname: 'satisfactory-server'
     ports:
